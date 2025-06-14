@@ -1,1 +1,108 @@
-This is a sample note.
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (master)
+$ git init
+Reinitialized existing Git repository in E:/Android/Android Java Project Resources/.git/
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (master)
+$ git remote -v
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (master)
+$ git remote add origin https://github.com/Md-Raju-Mia/Android_java_Practice_Project.git
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (master)
+$ git branch
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (master)
+$ ^C
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (master)
+$ mkdir TestFolder
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (master)
+$ dir
+TestFolder
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (master)
+$ cd TestFolder
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources/TestFolder (master)
+$ echo "This is a sample note." > Notes.txt
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources/TestFolder (master)
+$ dir
+Notes.txt
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources/TestFolder (master)
+$ cd ..
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (master)
+$ git add TestFolder/
+warning: in the working copy of 'TestFolder/Notes.txt', LF will be replaced by CRLF the next time Git touches it
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (master)
+$ git commit -m "Added TestFolder with sample text"
+[master (root-commit) 12e2452] Added TestFolder with sample text
+ 1 file changed, 1 insertion(+)
+ create mode 100644 TestFolder/Notes.txt
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (master)
+$ git branch -M main
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (main)
+$ git push -u origin main
+To https://github.com/Md-Raju-Mia/Android_java_Practice_Project.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Md-Raju-Mia/Android_java_Practice_Project.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (main)
+$ ^C
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (main)
+$ git pull --rebase origin main
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 893 bytes | 11.00 KiB/s, done.
+From https://github.com/Md-Raju-Mia/Android_java_Practice_Project
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+Successfully rebased and updated refs/heads/main.
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 378 bytes | 378.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Md-Raju-Mia/Android_java_Practice_Project.git
+   1e79395..619d0e9  main -> main
+branch 'main' set up to track 'origin/main'.
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+raju@Hello_Engineer MINGW64 /e/Android/Android Java Project Resources (main)
+$
